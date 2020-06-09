@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="margin: 0; padding: 0;">
+<head style="margin: 0; padding: 0;">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" style="margin: 0; padding: 0;">
+<title style="margin: 0; padding: 0;">Editable Invoice</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" style="margin: 0; padding: 0;">
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" style="margin: 0; padding: 0;">
+<script type="text/javascript" src="js/jquery-1.3.2.min.js" style="margin: 0; padding: 0;"></script><script type="text/javascript" src="js/example.js" style="margin: 0; padding: 0;"></script>
+</head>
+<body style="margin:0;padding:0;font:14px/1.4 Georgia, serif;">
+ 
+	<div id="page-wrap" style="margin:0 auto;padding:0;width:800px;">
+ 
+		<textarea id="header" style="margin:20px 0;padding:8px 0px;border:0;font:bold 15px Helvetica, Sans-Serif;overflow:hidden;resize:none;height:15px;width:100%;background:#222;text-align:center;color:white;text-decoration:uppercase;letter-spacing:20px;">INVOICE</textarea><div id="identity" style="margin: 0; padding: 0;">
+ 
+            <textarea id="address" style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:250px;height:150px;float:left;">Chris Coyier
+123 Appleseed Street
+Appleville, WI 53719
+ 
+Phone: (555) 555-5555</textarea><div id="logo" style="margin:0;padding:0;text-align:right;float:right;position:relative;margin-top:25px;border:1px solid #fff;max-width:540px;max-height:100px;overflow:hidden;">
+ 
+ 
+ 
+ 
+              <img id="image" src="images/logo.png" alt="logo" style="margin: 0; padding: 0;">
+</div>
+ 
+		</div>
+ 
+		<div style="clear:both;margin:0;padding:0;"></div>
+ 
+		<div id="customer" style="margin:0;padding:0;overflow:hidden;">
+ 
+            <textarea id="customer-title" style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;font-size:20px;font-weight:bold;float:left;">Widget Corp.
+c/o Steve Widget</textarea><table id="meta" style="margin:0;padding:0;border-collapse:collapse;margin-top:1px;width:300px;float:right;">
+<tr style="margin: 0; padding: 0;">
+<td class="meta-head" style="margin:0;padding:5px;border:1px solid black;text-align:left;background:#eee;">Invoice #</td>
+                    <td style="margin:0;padding:5px;border:1px solid black;text-align:right;"><textarea style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:100%;height:20px;text-align:right;">000123</textarea></td>
+                </tr>
+<tr style="margin: 0; padding: 0;">
+<td class="meta-head" style="margin:0;padding:5px;border:1px solid black;text-align:left;background:#eee;">Date</td>
+                    <td style="margin:0;padding:5px;border:1px solid black;text-align:right;"><textarea id="date" style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:100%;height:20px;text-align:right;">December 15, 2009</textarea></td>
+                </tr>
+<tr style="margin: 0; padding: 0;">
+<td class="meta-head" style="margin:0;padding:5px;border:1px solid black;text-align:left;background:#eee;">Amount Due</td>
+                    <td style="margin:0;padding:5px;border:1px solid black;text-align:right;"><div class="due" style="margin: 0; padding: 0;">$875.00</div></td>
+                </tr>
+</table>
+</div>
+ 
+		<table id="items" style="margin:30px 0 0 0;padding:0;border-collapse:collapse;clear:both;width:100%;border:1px solid black;">
+<tr style="margin: 0; padding: 0;">
+<th style="margin:0;padding:5px;border:1px solid black;background:#eee;">Item</th>
+		      <th style="margin:0;padding:5px;border:1px solid black;background:#eee;">Description</th>
+		      <th style="margin:0;padding:5px;border:1px solid black;background:#eee;">Unit Cost</th>
+		      <th style="margin:0;padding:5px;border:1px solid black;background:#eee;">Quantity</th>
+		      <th style="margin:0;padding:5px;border:1px solid black;background:#eee;">Price</th>
+		  </tr>
+<tr class="item-row" style="margin: 0; padding: 0;">
+<td class="item-name" style="margin:0;padding:5px;border:0;width:175px;vertical-align:top;"><div class="delete-wpr" style="margin:0;padding:0;position:relative;">
+<textarea style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:100%;height:50px;">Web Updates</textarea><a class="delete" href="javascript:;" title="Remove row" style="margin:0;padding:0px 3px;display:block;color:#000;text-decoration:none;position:absolute;background:#EEEEEE;font-weight:bold;border:1px solid;top:-6px;left:-22px;font-family:Verdana;font-size:12px;">X</a>
+</div></td>
+		      <td class="description" style="margin:0;padding:5px;border:0;width:300px;vertical-align:top;"><textarea style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:100%;height:50px;">Monthly web updates for http://widgetcorp.com (Nov. 1 - Nov. 30, 2009)</textarea></td>
+		      <td style="margin:0;padding:5px;border:0;vertical-align:top;"><textarea class="cost" style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:80px;height:50px;">$650.00</textarea></td>
+		      <td style="margin:0;padding:5px;border:0;vertical-align:top;"><textarea class="qty" style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:80px;height:50px;">1</textarea></td>
+		      <td style="margin:0;padding:5px;border:0;vertical-align:top;"><span class="price" style="margin: 0; padding: 0;">$650.00</span></td>
+		  </tr>
+<tr class="item-row" style="margin: 0; padding: 0;">
+<td class="item-name" style="margin:0;padding:5px;border:0;width:175px;vertical-align:top;"><div class="delete-wpr" style="margin:0;padding:0;position:relative;">
+<textarea style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:100%;height:50px;">SSL Renewals</textarea><a class="delete" href="javascript:;" title="Remove row" style="margin:0;padding:0px 3px;display:block;color:#000;text-decoration:none;position:absolute;background:#EEEEEE;font-weight:bold;border:1px solid;top:-6px;left:-22px;font-family:Verdana;font-size:12px;">X</a>
+</div></td>
+ 
+		      <td class="description" style="margin:0;padding:5px;border:0;width:300px;vertical-align:top;"><textarea style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:100%;height:50px;">Yearly renewals of SSL certificates on main domain and several subdomains</textarea></td>
+		      <td style="margin:0;padding:5px;border:0;vertical-align:top;"><textarea class="cost" style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:80px;height:50px;">$75.00</textarea></td>
+		      <td style="margin:0;padding:5px;border:0;vertical-align:top;"><textarea class="qty" style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:80px;height:50px;">3</textarea></td>
+		      <td style="margin:0;padding:5px;border:0;vertical-align:top;"><span class="price" style="margin: 0; padding: 0;">$225.00</span></td>
+		  </tr>
+<tr id="hiderow" style="margin: 0; padding: 0;">
+<td colspan="5" style="margin:0;padding:5px;border:1px solid black;"><a id="addrow" href="javascript:;" title="Add a row" style="margin: 0; padding: 0;">Add a row</a></td>
+		  </tr>
+<tr style="margin: 0; padding: 0;">
+<td colspan="2" class="blank" style="margin:0;padding:5px;border:0;"> </td>
+		      <td colspan="2" class="total-line" style="margin:0;padding:5px;border:1px solid black;border-right:0;text-align:right;">Subtotal</td>
+		      <td class="total-value" style="margin:0;padding:10px;border:1px solid black;border-left:0;"><div id="subtotal" style="margin: 0; padding: 0;">$875.00</div></td>
+		  </tr>
+<tr style="margin: 0; padding: 0;">
+<td colspan="2" class="blank" style="margin:0;padding:5px;border:0;"> </td>
+		      <td colspan="2" class="total-line" style="margin:0;padding:5px;border:1px solid black;border-right:0;text-align:right;">Total</td>
+		      <td class="total-value" style="margin:0;padding:10px;border:1px solid black;border-left:0;"><div id="total" style="margin: 0; padding: 0;">$875.00</div></td>
+		  </tr>
+<tr style="margin: 0; padding: 0;">
+<td colspan="2" class="blank" style="margin:0;padding:5px;border:0;"> </td>
+		      <td colspan="2" class="total-line" style="margin:0;padding:5px;border:1px solid black;border-right:0;text-align:right;">Amount Paid</td>
+ 
+		      <td class="total-value" style="margin:0;padding:10px;border:1px solid black;border-left:0;"><textarea id="paid" style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:80px;height:20px;background:none;">$0.00</textarea></td>
+		  </tr>
+<tr style="margin: 0; padding: 0;">
+<td colspan="2" class="blank" style="margin:0;padding:5px;border:0;"> </td>
+		      <td colspan="2" class="total-line balance" style="margin:0;padding:5px;border:1px solid black;background:#eee;border-right:0;text-align:right;">Balance Due</td>
+		      <td class="total-value balance" style="margin:0;padding:10px;border:1px solid black;background:#eee;border-left:0;"><div class="due" style="margin: 0; padding: 0;">$875.00</div></td>
+		  </tr>
+</table>
+<div id="terms" style="margin:20px 0 0 0;padding:0;text-align:center;">
+		  <h5 style="margin:0 0 8px 0;padding:0 0 8px 0;text-transform:uppercase;font:13px Helvetica, Sans-Serif;letter-spacing:10px;border-bottom:1px solid black;">Terms</h5>
+		  <textarea style="margin:0;padding:0;border:0;font:14px Georgia, Serif;overflow:hidden;resize:none;width:100%;text-align:center;">NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.</textarea>
+</div>
+ 
+	</div>
+ 
+</body>
+</html>
